@@ -13,10 +13,10 @@ class WorkController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index()
+    public function index(Request $request)
     {
-        $works = Work::all();
-        return view('work.list', compact('works', 'works'));
+        $works = Work::paginate(5);
+        return view('work.list', ['works'=>$works]);
     }
 
     /**

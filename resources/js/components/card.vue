@@ -4,7 +4,7 @@
         <div class="card-header">{{ title }}</div>
 
         <div class="card-body">
-            {{ content }}
+            <slot></slot>
         </div>
     </div>
 
